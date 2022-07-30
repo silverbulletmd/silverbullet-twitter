@@ -1,0 +1,18 @@
+{
+  "name": "twitter",
+  "version": 0.1,
+  "functions": {
+    "tweetUnfurlOptions": {
+      "events": [
+        "unfurl:options"
+      ],
+      "code": "(() => { var mod=(()=>{var o=Object.defineProperty;var u=Object.getOwnPropertyDescriptor;var a=Object.getOwnPropertyNames;var l=Object.prototype.hasOwnProperty;var c=(t,e)=>{for(var n in e)o(t,n,{get:e[n],enumerable:!0})},m=(t,e,n,s)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let r of a(e))!l.call(t,r)&&r!==n&&o(t,r,{get:()=>e[r],enumerable:!(s=u(e,r))||s.enumerable});return t};var p=t=>m(o({},\"__esModule\",{value:!0}),t);var w={};c(w,{default:()=>f});async function i(t){return/https:\\/\\/twitter.com\\/[^\\/]+\\/status\\/\\d+/.exec(t)?[{id:\"tweet-unfurl\",name:\"Tweet content\"}]:[]}var f=i;return p(w);})();\n return mod;})()"
+    },
+    "tweetUnfurl": {
+      "events": [
+        "unfurl:tweet-unfurl"
+      ],
+      "code": "(() => { var mod=(()=>{var o=Object.defineProperty;var u=Object.getOwnPropertyDescriptor;var a=Object.getOwnPropertyNames;var l=Object.prototype.hasOwnProperty;var c=(e,t)=>{for(var r in t)o(e,r,{get:t[r],enumerable:!0})},m=(e,t,r,s)=>{if(t&&typeof t==\"object\"||typeof t==\"function\")for(let n of a(t))!l.call(e,n)&&n!==r&&o(e,n,{get:()=>t[n],enumerable:!(s=u(t,n))||s.enumerable});return e};var f=e=>m(o({},\"__esModule\",{value:!0}),e);var d={};c(d,{default:()=>w});function p(e){return e.replace(/<br>/g,\" \").replace(/<p>/g,\" \").replace(/<\\/?[^>]+(>|$)/g,\"\").split(\"&mdash;\")[0].trim()}async function i(e){let t=await fetch(`https://publish.twitter.com/oembed?url=${e}`);if(t.status!==200)throw console.error(await t.text()),new Error(\"Failed to fetch oEmbed result\");let r=await t.json();return`[${r.author_name}](${e}):\n > ${p(r.html)}`}var w=i;return f(d);})();\n return mod;})()"
+    }
+  }
+}

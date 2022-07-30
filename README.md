@@ -1,24 +1,19 @@
+# SilverBullet for Twitter
+Currently the only thing this plug offers is unfurling links to tweets. To use, paste in a link to a Tweet like `https://twitter.com/zef/status/1547943418403295232`, then run the `Link: Unfurl` command and select `Tweet content` to "enrich" the tweet URL with the content of the linked tweet, e.g.
 
-# SilverBullet plug for saying hello to the user
+    https://twitter.com/zef/status/1547687321679511552
 
-A well behaved plug that will greet your users.
+Turns into:
 
-## Wait, SilverBullet?
-
-If you don't know what it is, check its [webpage](https://silverbullet.md), but if
-you want me to spoil the fun: it is an extensible note taking app with markdown and plain files at its core
-(well... there is a bit of magic in there too, but what good it would be without a little magic?)
+    [Zef Hemel](https://twitter.com/zef/status/1547687321679511552):
+    > For those who missed my earlier posts on Silver Bullet: it’s my new powerful note taking/PKM app. Demo video from a user’s perspective: https://t.co/MKauSTcUG3 How it works technically (plugins all the way down): https://t.co/sqCkAa0pem Repo: https://t.co/rrxQdyxze1
 
 ## Installation
 
 Open (`cmd+k`) your `PLUGS` note in SilverBullet and add this plug to the list:
 
 ```yaml
-- https://github.com/Willyfrog/silverbullet-plug-example/releases/download/v0.1/helloworld.plug.json
+- github:silverbulletmd/silverbullet-twitter/twitter.plug.json
 ```
 
 Then run the `Plugs: Update` command and off you go!
-
-## What's with all that Lone Ranger quotes
-
-Don't you know that the [Lone Ranger used silver bullets to solve all the problems](https://en.wikipedia.org/wiki/Silver_bullet#Lone_Ranger)?

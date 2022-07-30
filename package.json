@@ -1,10 +1,10 @@
 {
-  "name": "hello_world",
+  "name": "silverbullet-twitter",
   "version": "0.0.1",
-  "author": "A Lone Ranger",
+  "author": "Zef Hemel",
   "scripts": {
-    "build": "plugos-bundle --exclude yaml handlebars @lezer/lr -- helloWorld.plug.yaml",
-    "start": "plugos-bundle -w --exclude yaml handlebars @lezer/lr -- helloWorld.plug.yaml"
+    "build": "plugos-bundle --exclude yaml handlebars @lezer/lr -- twitter.plug.yaml",
+    "start": "plugos-bundle -w --exclude yaml handlebars @lezer/lr -- twitter.plug.yaml"
   },
   "dependencies": {
     "@silverbulletmd/plugos-silverbullet-syscall": "^0.0.26",

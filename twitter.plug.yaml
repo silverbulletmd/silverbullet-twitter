@@ -1,0 +1,11 @@
+name: twitter
+version: 0.1
+functions:
+  tweetUnfurlOptions:
+    path: "./unfurl.ts:unfurlOptions"
+    events:
+      - unfurl:options
+  tweetUnfurl:
+    path: "./unfurl.ts:unfurlTweet"
+    events:
+      - unfurl:tweet-unfurl
