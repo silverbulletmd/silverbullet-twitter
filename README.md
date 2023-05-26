@@ -13,7 +13,7 @@ Turns into:
 Open (`cmd+k`) your `PLUGS` note in SilverBullet and add this plug to the list:
 
 ```yaml
-- github:silverbulletmd/silverbullet-twitter/twitter.plug.json
+- github:silverbulletmd/silverbullet-twitter/twitter.plug.js
 ```
 
 Then run the `Plugs: Update` command and off you go!
